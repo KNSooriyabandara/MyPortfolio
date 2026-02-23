@@ -17,23 +17,23 @@ const ServiceCard = ({ index, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full border-2 border-[#808080] rounded-sm bg-[#c0c0c0] 
+      className="w-full border-2 border-[#808080] rounded-sm bg-[#151313] 
                  shadow-[inset_2px_2px_#fff,inset_-2px_-2px_#000]"
     >
-      {/* Title bar */}
-      <div className="w-full bg-[#000080] text-white px-2 py-1 flex justify-between items-center">
+      {/* Title bar (light gray, minimal round edge, no close button) */}
+      <div className="w-full bg-[#d3d3d3] text-black px-2 py-1 rounded-t-sm">
         <span className="font-bold text-sm">{title}</span>
-        <span className="bg-[#c0c0c0] text-black px-2 cursor-pointer">X</span>
       </div>
 
       {/* Content */}
       <div className="flex flex-col items-center justify-center py-5 px-4">
         <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
-        <h3 className="text-black text-[16px] font-bold text-center">{title}</h3>
+       
       </div>
     </motion.div>
   </Tilt>
 );
+
 
 const About = () => {
   return (
