@@ -81,7 +81,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "DJango",
     icon: redux,
   },
   {
@@ -93,7 +93,7 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: "SQLite",
     icon: mongodb,
   },
   {
@@ -109,65 +109,54 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Python",
     icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Computer Engineer Undergraduate",
+    company_name: "University of Peradeniya",
     icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    iconBg: "#000000",
+    date: "April 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+      "I am an undergraduate student in Computer Engineering at the University of Peradeniya.",
+      "My studies focus on both hardware and software aspects of computing.",
+      "I have a strong interest in modern technologies and problem-solving.",
+      "I am passionate about applying engineering principles to real-world challenges and continuously expanding my technical skills."
+    ]
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Self Employed Web Developer",
+    company_name: "KNS",
     icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    iconBg: "#000000",
+    date: "Jan 2021 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
+      "I worked independently as a web developer, specializing in both frontend and backend development.",
+      "I designed and built user‑friendly websites and applications tailored to client needs.",
+      "My focus was on delivering efficient and scalable digital solutions.",
+      "This role helped me strengthen my technical expertise and professional approach."
+    ]
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Trainee",
+    company_name: "Arceion",
     icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    iconBg: "#000000",
+    date: "Jan 2026 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+      "I am working as a trainee at Arceion as a web developer.",
+      "My primary tech stack includes Django, PyQt, and JavaScript.",
+      "I contribute to building and maintaining web applications using these technologies.",
+      "Collaborating with the team to deliver efficient and scalable solutions."
+    ]
+  }
 ];
+
+export default experiences;
 
 const testimonials = [
   {
@@ -198,16 +187,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "S.M.S",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The Student Management System (SMS) is a web-based application designed to streamline and automate the management of student information within an educational institution. It provides administrators, teachers, and students with a centralized platform to handle academic and administrative tasks efficiently this is a training project.",
     tags: [
       {
-        name: "react",
+        name: "django",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "sqlite",
         color: "green-text-gradient",
       },
       {
@@ -216,44 +205,44 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/KNSooriya/SMS.git",
   },
   {
-    name: "Job IT",
+    name: "AI assistant",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An AI-powered assistant application that helps users with tasks like answering questions, generating content, and providing recommendations and guided error resolution. The assistant is built using Python and leverages the Mistral 7B Instruct model, which is a powerful language model designed for natural langauge understatnding and generation.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mistral",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ollama",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/KNSooriya/AI-Assistant.git",
+  },
+  {
+    name: "3D Portfolio",
+    description:
+      "A comprehensive 3D portfolio website built with React and Three.js, showcasing projects and skills in an immersive environment.   The portfolio features interactive 3D models, dynamic animations, and a visually stunning design to create an engaging user experience. It serves as a platform to demonstrate creativity and expertise in 3D web development.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "react-three-fiber",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],

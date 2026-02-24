@@ -1,10 +1,28 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  // Track when the Hero section is visible
+  const { ref, inView } = useInView({
+    triggerOnce: true, // load only once
+    threshold: 0.2,    // load when 20% of section is visible
+  });
+
   return (
-    <section className="relative w-full h-screen mx-auto bg-cover bg-center" style={{ backgroundImage: "url('/bg.png')" }}>
+    <section
+      ref={ref}
+      className="relative w-full h-screen mx-auto bg-cover bg-center"
+    >
+      {/* Background image with lazy loading */}
+      <img
+        src="/bg.webp" // compress bg.png → bg.webp for smaller size
+        alt="background"
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+      />
+
       {/* Bottom gradient overlay */}
       <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black to-transparent" />
 
@@ -18,7 +36,7 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-[72px] text-white font-hacked `}>
+          <h1 className={`${styles.heroHeadText} text-[72px] text-white font-hacked`}>
             Hi, I'm <span className="text-[#04d9ff] font-hacked">K.N.Sooriya</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 font-retro`}>
@@ -28,8 +46,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3D Computer Canvas */}
-      <ComputersCanvas />
+      {/* 3D Computer Canvas (lazy-loaded) */}
+      {inView && <ComputersCanvas />}
 
       {/* Scroll indicator */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
