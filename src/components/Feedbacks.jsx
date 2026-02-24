@@ -5,7 +5,7 @@ const Feedbacks = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black">
       <video
-        src="/videos/demo.mp4"   // put your converted video in /public/videos
+        src={`${import.meta.env.BASE_URL}videos/demo.mp4`}
         autoPlay
         loop
         muted
